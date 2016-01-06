@@ -37,6 +37,7 @@
 {
     // 创建tabBarItem,设置其属性并添加到TabBar
     WXTabBarItem *tabBarItem = [WXTabBarItem buttonWithType:UIButtonTypeCustom];
+    tabBarItem.tag = self.subviews.count;
     [tabBarItem setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [tabBarItem setTitle:title forState:UIControlStateNormal];
     [tabBarItem setBackgroundImage:[UIImage imageNamed:@"tabbar_separate_selected_bg"] forState:UIControlStateSelected];
@@ -49,6 +50,12 @@
 /** 切换TabBarItem的选中状态 */
 - (void)itemClick:(WXTabBarItem *)tabBarItem
 {
+    // 调用代理方法,传递当前选中和上一次选中的tabBarItem.tag给外部
+    if ([self.delegate respondsToSelector:@selector(tabBar:from:to:)]) {
+        [self.delegate tabBar:self from:self.selectedItem.tag to:tabBarItem.tag];
+    }
+    
+    // 切换选中状态
     self.selectedItem.selected = NO;
     self.selectedItem = tabBarItem;
     self.selectedItem.selected = YES;
@@ -71,7 +78,13 @@
     }
 }
 
+/** 取消选中 */
+- (void)unSeleted {
+    self.selectedItem.selected = NO;
+}
+
 @end
+
 
 #pragma mark - WXTabBarItem实现
 
