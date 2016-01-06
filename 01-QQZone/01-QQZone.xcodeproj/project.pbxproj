@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D9281B041C3AAA3000A5646E /* WXDockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9281B031C3AAA3000A5646E /* WXDockView.m */; };
 		D9281B071C3AAE7800A5646E /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = D9281B061C3AAE7800A5646E /* Const.m */; };
+		D94A07011C3D85C40087F1F1 /* WXAllStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94A07001C3D85C40087F1F1 /* WXAllStatusViewController.m */; };
 		D980767F1C3A307800907BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D980767D1C3A307800907BA2 /* Main.storyboard */; };
 		D98076811C3A307800907BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D98076801C3A307800907BA2 /* Assets.xcassets */; };
 		D98076841C3A307800907BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98076821C3A307800907BA2 /* LaunchScreen.storyboard */; };
@@ -49,6 +50,8 @@
 		D9281B051C3AAE7800A5646E /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		D9281B061C3AAE7800A5646E /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
 		D9281B081C3AAE9F00A5646E /* QQZone.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQZone.pch; sourceTree = "<group>"; };
+		D94A06FF1C3D85C40087F1F1 /* WXAllStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAllStatusViewController.h; sourceTree = "<group>"; };
+		D94A07001C3D85C40087F1F1 /* WXAllStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAllStatusViewController.m; sourceTree = "<group>"; };
 		D98076711C3A307700907BA2 /* 01-QQZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-QQZone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D980767E1C3A307800907BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D98076801C3A307800907BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				D98076BE1C3A998000907BA2 /* WXMainViewController.m */,
 				D9956E0A1C3AE039009C98F9 /* WXMoodViewController.h */,
 				D9956E0B1C3AE039009C98F9 /* WXMoodViewController.m */,
+				D94A06FF1C3D85C40087F1F1 /* WXAllStatusViewController.h */,
+				D94A07001C3D85C40087F1F1 /* WXAllStatusViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98076BB1C3A30BF00907BA2 /* UIView+AdjustFrame.m in Sources */,
+				D94A07011C3D85C40087F1F1 /* WXAllStatusViewController.m in Sources */,
 				D9281B071C3AAE7800A5646E /* Const.m in Sources */,
 				D9956E0C1C3AE039009C98F9 /* WXMoodViewController.m in Sources */,
 				D98076B91C3A30BF00907BA2 /* WXLoginViewController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "WXMoodViewController.h"
 #import "WXTabBar.h"
 #import "WXIconButton.h"
+#import "WXAllStatusViewController.h"
 
 @interface WXMainViewController () <WXBottomMenuDelegate, WXTabBarDelegate>
 
@@ -74,8 +75,8 @@
 /** 初始化控制器 */
 - (void)setupControllers {
     // 1.添加子控制器
-    UIViewController *vc1 = [[UIViewController alloc] init];
-    vc1.view.backgroundColor = [UIColor redColor];
+    WXAllStatusViewController *vc1 = [[WXAllStatusViewController alloc] init];
+//    vc1.view.backgroundColor = [UIColor redColor];
     [self setNav:vc1];
     
     UIViewController *vc2 = [[UIViewController alloc] init];
@@ -162,6 +163,8 @@
     NSTimeInterval duration = [coordinator transitionDuration];
     [UIView animateWithDuration:duration animations:^{
         [self.dockView rotateToLandscape:isLandscape];
+        // 屏幕旋转时,重新设置contentView的x值,设置为当前dockView的宽度
+        self.contentView.x = self.dockView.width;
     }];
 }
 
